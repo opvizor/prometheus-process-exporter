@@ -2,12 +2,12 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  repository: ncabatoff/process-exporter
-  tag: 0.4.0
+  repository:  opvizorpa/process-exporter
+  tag: 0.7.0
   pullPolicy: IfNotPresent
 
 ## Specify entries of `process_names:` in the process-expoter config
-## See https://github.com/ncabatoff/process-exporter/tree/master#using-a-config-file
+## See https://github.com/opvizor/process-exporter/tree/master#using-a-config-file
 groups:
 - comm:
   - chronyd
@@ -95,7 +95,8 @@ tolerations:
 
 ## Additional container arguments
 ##
-extraArgs: {}
+extraArgs: 
+    - --k8s
 #   - --collector.diskstats.ignored-devices=^(ram|loop|fd|(h|s|v)d[a-z]|nvme\\d+n\\d+p)\\d+$
 
 ## Additional mounts from the host

@@ -1,17 +1,17 @@
-# Prometheus Process Exporter
+# Prometheus Process Exporter - fork by opvizor
 
-* Installs prometheus [process exporter](https://github.com/ncabatoff/process-exporter)
+* Installs prometheus [process exporter](https://github.com/opvizor/process-exporter)
 
 ## TL;DR;
 
 ```console
-$ helm repo add prometheus-process-exporter-charts https://raw.githubusercontent.com/mumoshu/prometheus-process-exporter/master/docs
+$ helm repo add prometheus-process-exporter-charts https://raw.githubusercontent.com/opvizor/prometheus-process-exporter/master/docs
 $ helm install --name process-exporter prometheus-process-exporter-charts/prometheus-process-exporter
 ```
 
 ## Introduction
 
-This chart bootstraps a prometheus [process exporter](https://github.com/ncabatoff/process-exporter) daemonset on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps a prometheus [process exporter](https://github.com/opvizor/process-exporter) daemonset on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Installing the Chart
 
@@ -39,10 +39,10 @@ The following table lists the configurable parameters of the process exporter ch
 
 |             Parameter             |                                                          Description                                                          |                 Default                 |     |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | --- |
-| `image.repository`                | Image repository                                                                                                              | `ncabatoff/process-exporter`      |     |
+| `image.repository`                | Image repository                                                                                                              | `opvizor/process-exporter`      |     |
 | `image.tag`                       | Image tag                                                                                                                     | `0.4.0`                               |     |
 | `image.pullPolicy`                | Image pull policy                                                                                                             | `IfNotPresent`                          |     |
-| `groups`                         | [Entries of `process_names:` in the process-expoter config](https://github.com/ncabatoff/process-exporter/tree/master#using-a-config-file) | `{"groups": [{"comm": ["chronyd"]}, {"comm": ["bash"]}, {"comm": ["rsync"]}, {"comm": ["scp"]}, {"comm": ["ssh"]}]` |
+| `groups`                         | [Entries of `process_names:` in the process-expoter config](https://github.com/opvizor/process-exporter/tree/master#using-a-config-file) | `{"groups": [{"comm": ["chronyd"]}, {"comm": ["bash"]}, {"comm": ["rsync"]}, {"comm": ["scp"]}, {"comm": ["ssh"]}]` |
 | `extraArgs`                       | Additional container arguments                                                                                                | `[]`                                    |     |
 | `extraHostVolumeMounts`           | Additional host volume mounts                                                                                                 | {}                                      |     |
 | `podLabels`                       | Additional labels to be added to pods                                                                                         | {}                                      |     |
