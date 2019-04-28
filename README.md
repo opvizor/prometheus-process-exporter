@@ -15,7 +15,7 @@ This chart bootstraps a prometheus [process exporter](https://github.com/opvizor
 
 ## Installing the Chart
 
-To install the chart with the release name `my-release`:
+To install the chart with the release name `process-exporter`:
 
 ```console
 $ helm install --name process-exporter prometheus-process-exporter-charts/prometheus-process-exporter
