@@ -6,6 +6,9 @@ metadata:
   labels: {{ include "prometheus-process-exporter.labels" . | indent 4 }}
   name: psp-{{ template "prometheus-process-exporter.fullname" . }}
 rules:
+- apiGroups: ['']
+  resources: ['pods','nodes']
+  verbs:     ['get','list','watch']
 - apiGroups: ['extensions']
   resources: ['podsecuritypolicies']
   verbs:     ['use']

@@ -9,16 +9,9 @@ image:
 ## Specify entries of `process_names:` in the process-expoter config
 ## See https://github.com/opvizor/process-exporter/tree/master#using-a-config-file
 groups:
-- comm:
-  - chronyd
-- comm:
-  - bash
-- comm:
-  - rsync
-- comm:
-  - scp
-- comm:
-  - ssh
+  - name: "{{.Comm}}"
+    cmdline: 
+    - '.+'
 
 ## Creates a Prometheus Operator ServiceMonitor
 serviceMonitor:
@@ -97,6 +90,7 @@ tolerations:
 ##
 extraArgs: 
     - --k8s
+    - --debug
 #   - --collector.diskstats.ignored-devices=^(ram|loop|fd|(h|s|v)d[a-z]|nvme\\d+n\\d+p)\\d+$
 
 ## Additional mounts from the host
