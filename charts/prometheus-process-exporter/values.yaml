@@ -19,11 +19,12 @@ serviceMonitor:
 
 service:
   type: ClusterIP
-  port: 9100
-  targetPort: 9100
+  port: 9585
+  targetPort: 9585
   nodePort:
   annotations:
     prometheus.io/scrape: "true"
+    prometheus.io/port: "9585"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
