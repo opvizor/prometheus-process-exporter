@@ -1,5 +1,5 @@
 dev:
-	helm delete --purge process-exporter
+	#helm delete --purge process-exporter
 	helm template charts/prometheus-process-exporter
 	helm install --name process-exporter charts/prometheus-process-exporter
 	sleep 2

@@ -12,6 +12,6 @@ subsets:
       {{- end }}
     ports:
       - name: metrics
-        port: 9100
+        port: 9585
         protocol: TCP
 {{- end }}
