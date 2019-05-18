@@ -3,7 +3,7 @@
 set -e
 
 set -vx
-(cd charts/prometheus-process-exporter; helm package .;git add *.tgz)
+(cd charts/prometheus-process-exporter; helm package .)
 chart-releaser upload -o opvizor -r prometheus-process-exporter -t $GITHUB_TOKEN -p charts/prometheus-process-exporter
 chart-releaser index -o opvizor -r prometheus-process-exporter -t $GITHUB_TOKEN -p docs/index.yaml
 git add docs/index.yaml
