@@ -3,6 +3,25 @@ entries:
   prometheus-process-exporter:
   - apiVersion: v1
     appVersion: 0.7.0
+    created: "2019-05-18T16:06:06.889335957+07:00"
+    description: A Helm chart for prometheus process-exporter
+    digest: 213fed7b61e43367d5fd70478a2e363c75048acc52c46bf7ff6d5842edeae2e8
+    home: https://github.com/opvizor/prometheus-process-exporter
+    keywords:
+    - process-exporter
+    - prometheus
+    - exporter
+    maintainers:
+    - email: support@opvizor.com
+      name: opvizor
+    name: prometheus-process-exporter
+    sources:
+    - https://github.com/opvizor/process-exporter
+    urls:
+    - https://github.com/opvizor/prometheus-process-exporter/releases/download/prometheus-process-exporter-0.2.4/prometheus-process-exporter-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v1
+    appVersion: 0.7.0
     created: "2019-04-28T10:17:07.450809025+07:00"
     description: A Helm chart for prometheus process-exporter
     digest: b33cb291c9935d801436529748f12279cf6fea04afb0663d6cf298a7a8fac8f2
