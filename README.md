@@ -23,6 +23,14 @@ $ helm install --name process-exporter prometheus-process-exporter-charts/promet
 
 The command deploys process exporter on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
+## Upgrading the Chart
+
+To upgrade the deployed version the chart:
+```console
+$ helm repo update
+$ helm upgrade process-exporter prometheus-process-exporter-charts/prometheus-process-exporter
+```
+
 ## Uninstalling the Chart
 
 To uninstall/delete the `my-release` deployment:
