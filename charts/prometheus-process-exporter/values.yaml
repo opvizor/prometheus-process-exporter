@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 image:
   repository:  opvizorpa/process-exporter
-  tag: 0.7.0
+  tag: 8.0
   pullPolicy: IfNotPresent
 
 ## Specify entries of `process_names:` in the process-expoter config
